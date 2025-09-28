@@ -1,0 +1,149 @@
+﻿@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Jiaming Han
+   Date:   September 24th, 2025
+   
+   Filename: lake_styles.css
+
+*/
+@font-face {
+  font-family: myFont1; /* Custom font 1 */
+  src: url(DobkinPlain.woff); /* Font file location */
+}
+@font-face {
+  font-family: myFont2; /* Custom font 2 */
+  src: url(cac_champagne.ttf); /* Font file location */
+}
+
+html{
+   background-color: rgb(202, 202, 127); /* Page background color */
+}
+
+
+section#leftcol h1{
+   font-family: 'myFont1'; /* Use custom font for main heading */
+   font-size: 3em;
+}
+
+section#rightcol h2{
+   font-family: 'myFont2'; /* Use custom font for subheading */
+   font-size: 2em;
+}
+
+header nav a{
+   background-color: purple; /* Navigation background */
+   padding-top: 4px;
+   padding-bottom: 4px;
+   text-decoration: none;
+   color: white;
+   
+}
+
+header nav a:hover{
+   color: green; /* Hover effect for nav links */
+}
+
+section#leftcol{
+   background-color:rgb(47, 45, 45); /* Left column background */
+   color:rgb(237, 229, 229); /* Left column text color */
+} 
+
+section#leftcol aside h1{
+   text-align: center !important; /* Center aside heading */
+   font-family: Arial, sans-serif;
+   font-size: 18px;
+}
+section#leftcol p{
+   padding: 15px;; /* Padding for left column paragraphs */
+}
+section#leftcol p+aside{
+   font-family: Arial, sans-serif;
+   background-color: rgba(202, 146, 155,0.9); /* Aside background */
+   padding-right: 12px;
+   line-height: 1.4;
+}
+
+section#leftcol aside+aside{
+   font-family: Arial, sans-serif;
+   background-color: rgba(50, 128, 66,0.9); /* Second aside background */
+   padding: 12px;
+}
+
+section#leftcol h2{
+   font-size: 18px; /* Left column subheading size */
+}
+
+section#leftcol aside ul li::before {
+   content: "▶"; /* Custom list marker */
+   color: rgb(202, 146, 155);
+   display: inline-block;
+   width: 1em;
+   margin-right: 5px;
+}
+
+section#rightcol{
+   background-color: rgb(147, 21, 147); /* Right column background */
+   color:rgb(236, 229, 242); /* Right column text color */
+   
+}
+
+section#rightcol a{
+   text-decoration: none;
+   color:rgb(199, 156, 163) /* Right column link color */
+}
+
+section#rightcol ul{
+   list-style-type: none; /* Remove default list style */
+}
+
+blockquote{
+   margin: 0;
+   padding: 15px 15px 15px 40px;
+   line-height: 1.6;
+   color: rgb(234, 158, 158); /* Blockquote text color */
+   position:relative;
+}
+
+blockquote::before {
+   content: "“"; /* Opening quote */
+   font-family: Georgia, serif;
+   font-size: 3em;
+   color: rgba(255, 255, 255, 0.3);
+   position: absolute;
+   top: 5px;
+   left: 10px;
+   line-height: 1;
+}
+
+blockquote::after {
+   content: "”"; /* Closing quote */
+   font-family: Georgia, serif;
+   font-size: 3em;
+   color: rgba(255, 255, 255, 0.3);
+   position: absolute;
+   bottom: -15px;
+   right: 10px;
+   line-height: 1;
+}
+
+footer{
+   background-color: rgba(60, 53, 38,0.9); /* Footer background */
+   color:rgb(237, 229, 229); /* Footer text color */
+   text-align: center;
+   padding: 5px;
+}
+
+body{
+   background: linear-gradient(
+      90deg,   
+      rgb(47,45,45) 70%,
+      rgb(147,21,147) 70%,
+      rgb(147,21,147) 100%
+   ); /* Page background gradient */
+   min-height: 100vh;
+}
